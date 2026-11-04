@@ -7,7 +7,7 @@ export interface VendorRepo {
   name: string;
   org: string;
   repo: string;
-  category: "mcp" | "wasm" | "webgpu" | "standards" | "graphics" | "protocols" | "compat" | "runtime";
+  category: "mcp" | "wasm" | "webgpu" | "standards" | "graphics" | "protocols" | "compat" | "runtime" | "posix";
   defaultBranch: string;
   subpathFilter?: string[];
   description: string;
@@ -130,6 +130,24 @@ export const VENDOR_REGISTRY: VendorRepo[] = [
     category: "runtime",
     defaultBranch: "master",
     description: "Empowering everyone to build reliable and efficient software",
+  },
+  {
+    id: "uutils-coreutils",
+    name: "uutils coreutils",
+    org: "uutils",
+    repo: "coreutils",
+    category: "posix",
+    defaultBranch: "main",
+    description: "Cross-platform Rust GNU coreutils rewrite conforming to POSIX.1-2024",
+  },
+  {
+    id: "rustix",
+    name: "Rustix Safe POSIX Syscalls",
+    org: "bytecodealliance",
+    repo: "rustix",
+    category: "posix",
+    defaultBranch: "main",
+    description: "Safe Rust bindings to POSIX/Linux syscalls without libc overhead",
   },
 ];
 
