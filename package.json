@@ -1,0 +1,16 @@
+{
+  "name": "yolo-vendor",
+  "version": "0.1.0",
+  "description": "YOLO upstream vendor mirrors, specs, and synchronization toolchain",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "sync": "bun run scripts/vendor-sync.ts",
+    "sync:dry": "bun run scripts/vendor-sync.ts --dry-run",
+    "test": "bun test",
+    "bench": "bun test tests/vendor-bench.test.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  }
+}

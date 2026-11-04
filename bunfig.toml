@@ -1,0 +1,10 @@
+# Bun configuration for yolo-vendor
+[install]
+cache = true
+
+[test]
+preload = []
+coverage = false
+
+[run]
+origin = "http://localhost:3000"
