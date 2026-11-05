@@ -12,6 +12,7 @@ describe("YOLO Vendor Upstream Registry", () => {
     expect(categories.has("protocols")).toBe(true);
     expect(categories.has("compat")).toBe(true);
     expect(categories.has("runtime")).toBe(true);
+    expect(categories.has("posix")).toBe(true);
   });
 
   test("registry contains MCP specifications", () => {
@@ -60,6 +61,20 @@ describe("YOLO Vendor Upstream Registry", () => {
     const rust = VENDOR_REGISTRY.find((r) => r.id === "rust-lang");
     expect(bun).toBeDefined();
     expect(rust).toBeDefined();
+  });
+
+  test("registry contains uutils/coreutils and bytecodealliance/rustix POSIX specs", () => {
+    const coreutils = VENDOR_REGISTRY.find((r) => r.id === "uutils-coreutils");
+    const rustix = VENDOR_REGISTRY.find((r) => r.id === "rustix");
+    expect(coreutils).toBeDefined();
+    expect(coreutils?.org).toBe("uutils");
+    expect(coreutils?.repo).toBe("coreutils");
+    expect(coreutils?.category).toBe("posix");
+
+    expect(rustix).toBeDefined();
+    expect(rustix?.org).toBe("bytecodealliance");
+    expect(rustix?.repo).toBe("rustix");
+    expect(rustix?.category).toBe("posix");
   });
 
   test("dry-run sync planner executes within benchmark performance budget", async () => {
