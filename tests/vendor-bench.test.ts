@@ -77,6 +77,32 @@ describe("YOLO Vendor Upstream Registry", () => {
     expect(rustix?.category).toBe("posix");
   });
 
+  test("registry contains oven-sh/bun, google/styleguide, google/skills, google/material-color-utilities, chromium, and aosp", () => {
+    const bun = VENDOR_REGISTRY.find((r) => r.id === "bun-fork");
+    expect(bun?.org).toBe("oven-sh");
+    expect(bun?.repo).toBe("bun");
+
+    const styleguide = VENDOR_REGISTRY.find((r) => r.id === "google-styleguide");
+    expect(styleguide).toBeDefined();
+    expect(styleguide?.org).toBe("google");
+    expect(styleguide?.repo).toBe("styleguide");
+
+    const skills = VENDOR_REGISTRY.find((r) => r.id === "google-skills");
+    expect(skills).toBeDefined();
+    expect(skills?.org).toBe("google");
+    expect(skills?.repo).toBe("skills");
+
+    const mcu = VENDOR_REGISTRY.find((r) => r.id === "google-material-color-utilities");
+    expect(mcu).toBeDefined();
+    expect(mcu?.repo).toBe("material-color-utilities");
+
+    const chromium = VENDOR_REGISTRY.find((r) => r.id === "chromium");
+    expect(chromium).toBeDefined();
+
+    const aosp = VENDOR_REGISTRY.find((r) => r.id === "aosp");
+    expect(aosp).toBeDefined();
+  });
+
   test("dry-run sync planner executes within benchmark performance budget", async () => {
     const start = performance.now();
     const manifest = await syncVendorRepos({ dryRun: true });

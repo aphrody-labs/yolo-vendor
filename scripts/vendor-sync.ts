@@ -7,7 +7,7 @@ export interface VendorRepo {
   name: string;
   org: string;
   repo: string;
-  category: "mcp" | "wasm" | "webgpu" | "standards" | "graphics" | "protocols" | "compat" | "runtime" | "posix";
+  category: "mcp" | "wasm" | "webgpu" | "standards" | "graphics" | "protocols" | "compat" | "runtime" | "posix" | "google";
   defaultBranch: string;
   subpathFilter?: string[];
   description: string;
@@ -148,6 +148,51 @@ export const VENDOR_REGISTRY: VendorRepo[] = [
     category: "posix",
     defaultBranch: "main",
     description: "Safe Rust bindings to POSIX/Linux syscalls without libc overhead",
+  },
+  {
+    id: "google-styleguide",
+    name: "Google Style Guides",
+    org: "google",
+    repo: "styleguide",
+    category: "standards",
+    defaultBranch: "gh-pages",
+    description: "Official Google Style Guides for Rust, TypeScript, C++, Go, Python, and Shell",
+  },
+  {
+    id: "google-skills",
+    name: "Google Skills & Prescriptive Plugins",
+    org: "google",
+    repo: "skills",
+    category: "google",
+    defaultBranch: "main",
+    description: "Official Google skills and plugins catalog for agentic coding across Cloud, Developers, Ads, Analytics, and Identity",
+  },
+  {
+    id: "google-material-color-utilities",
+    name: "Google Material Color Utilities",
+    org: "material-foundation",
+    repo: "material-color-utilities",
+    category: "graphics",
+    defaultBranch: "main",
+    description: "Google Material Design 3 HCT color space and dynamic color scheme algorithms (google/material-color-utilities)",
+  },
+  {
+    id: "chromium",
+    name: "Chromium Browser Engine",
+    org: "chromium",
+    repo: "chromium",
+    category: "runtime",
+    defaultBranch: "main",
+    description: "Upstream Chromium C++/Rust/Skia/Blink/V8/Dawn browser engine and depot_tools/gn/ninja build graph",
+  },
+  {
+    id: "aosp",
+    name: "Android Open Source Project (AOSP)",
+    org: "aosp-mirror",
+    repo: "platform_manifest",
+    category: "runtime",
+    defaultBranch: "main",
+    description: "Upstream AOSP Android 17 platform manifest, Soong, Bazel, repo, and Cuttlefish x86_64 virtual device tooling",
   },
 ];
 

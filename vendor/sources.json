@@ -877,6 +877,36 @@
       "origin": "https://github.com/aphrody-labs/Detours.git",
       "upstream": "https://github.com/microsoft/Detours.git",
       "path": "detours"
+    },
+    "oven-sh/bun": {
+      "origin": "https://github.com/oven-sh/bun.git",
+      "upstream": "https://github.com/oven-sh/bun.git",
+      "path": "bun"
+    },
+    "google/styleguide": {
+      "origin": "https://github.com/google/styleguide.git",
+      "upstream": "https://github.com/google/styleguide.git",
+      "path": "google/styleguide"
+    },
+    "google/skills": {
+      "origin": "https://github.com/google/skills.git",
+      "upstream": "https://github.com/google/skills.git",
+      "path": "google/skills"
+    },
+    "google/material-color-utilities": {
+      "origin": "https://github.com/material-foundation/material-color-utilities.git",
+      "upstream": "https://github.com/material-foundation/material-color-utilities.git",
+      "path": "google/material-color-utilities"
+    },
+    "chromium": {
+      "origin": "https://chromium.googlesource.com/chromium/src.git",
+      "upstream": "https://github.com/chromium/chromium.git",
+      "path": "chromium"
+    },
+    "aosp": {
+      "origin": "https://android.googlesource.com/platform/manifest",
+      "upstream": "https://android.googlesource.com/platform/manifest",
+      "path": "aosp"
     }
   },
   "references": {
